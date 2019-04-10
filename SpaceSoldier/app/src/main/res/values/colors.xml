@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#346cdb</color>
+    <color name="colorPrimaryDark">#114090</color>
+    <color name="colorAccent">#346cdb</color>
+    <color name="colorBlackString">#343b45</color>
+    <color name="tab_unselected">#FFFFFF</color>
+    <color name="button_enabled">#707070</color>
+    <color name="record_list_background">#E9EBF0</color>
+</resources>

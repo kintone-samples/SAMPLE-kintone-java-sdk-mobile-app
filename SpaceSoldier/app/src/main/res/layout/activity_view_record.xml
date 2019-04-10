@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cybozu.spacesoldier.activities.ViewRecordActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_header_layout_height">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            style="@style/BaseButtonStyle"
+            android:layout_height="@dimen/activity_header_layout_height"
+            android:background="@null"
+            android:contentDescription="@string/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icons8_back_30_2" />
+
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/activity_header_layout_height"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical|center_horizontal"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="@dimen/activity_text_size_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnEdit"
+            app:layout_constraintStart_toEndOf="@+id/btnBack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnEdit"
+            style="@style/BaseButtonStyle"
+            android:layout_width="65dp"
+            android:background="@null"
+            android:contentDescription="@string/edit"
+            app:layout_constraintEnd_toStartOf="@+id/btnDelete"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icons8_pencil_30_2" />
+
+        <ImageButton
+            android:id="@+id/btnDelete"
+            style="@style/BaseButtonStyle"
+            android:layout_width="75dp"
+            android:background="@null"
+            android:contentDescription="@string/delete"
+            app:layout_constraintEnd_toStartOf="@+id/btnAddComment"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icons8_trash_30_2" />
+
+        <Button
+            android:id="@+id/btnAddComment"
+            style="@style/BaseButtonStyle"
+            android:layout_width="140dp"
+            android:text="@string/addComment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:layout_margin="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tabBackground="@drawable/tab_color_selector"
+            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabSelectedTextColor="#FFFFFF"
+            app:tabTextColor="@color/colorPrimary"
+            app:tabMaxWidth="0dp"
+            app:tabGravity="fill"
+            app:tabMode="fixed" >
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabDataItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/data" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabCommentItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/comment" />
+        </android.support.design.widget.TabLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

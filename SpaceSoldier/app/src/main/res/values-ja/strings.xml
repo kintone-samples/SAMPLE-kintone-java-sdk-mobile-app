@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Title -->
+    <string name="app_name">報告書</string>
+
+    <!-- Activity Title -->
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_add">新規報告書</string>
+    <string name="title_activity_edit">編集</string>
+
+    <!-- Common Button Label -->
+    <string name="login">ログイン</string>
+    <string name="logout">ログアウト</string>
+    <string name="add">新規作成</string>
+    <string name="cancel">キャンセル</string>
+    <string name="save">保存</string>
+    <string name="attachment">添付</string>
+    <string name="addFile">ファイル追加</string>
+    <string name="back">戻る</string>
+    <string name="edit">編集</string>
+    <string name="delete">削除</string>
+    <string name="addComment">コメント追加</string>
+    <string name="postComment">書き込む</string>
+    <string name="reply">返信</string>
+
+    <!-- Common Field Item -->
+    <string name="summary">概要</string>
+    <string name="photos">現場写真</string>
+    <string name="notes">作業状況</string>
+    <string name="createDateTime">作業日</string>
+    <string name="creator">報告者</string>
+    <string name="allRecords">全ての報告書</string>
+    <string name="confirmed">承認済み</string>
+    <string name="unconfirmed">未承認</string>
+    <string name="data">報告内容</string>
+    <string name="comment">コメント</string>
+    <string name="status">ステータス</string>
+
+    <!-- Login view -->
+    <string name="login_message">登録したいkintoneアプリのドメイン、\nログイン名、パスワード、アプリIDを\n入力して下さい。</string>
+    <string name="login_domain_hint">Subdomain.cybozu.com</string>
+    <string name="login_name_hint">ログイン名</string>
+    <string name="login_password_hint">パスワード</string>
+    <string name="login_app_id_hint">アプリID</string>
+    <string name="login_import_cert">証明書を読み込む</string>
+    <string name="login_cert_password">証明書パスワード</string>
+
+    <!-- Record List view -->
+    <string-array name="view_record_list_list">
+        <item>@string/allRecords</item>
+        <item>@string/unconfirmed</item>
+        <item>@string/confirmed</item>
+    </string-array>
+    <string name="no_record">レコードがありません</string>>
+
+    <!-- Record Card List view -->
+    <string name="title">タイトル</string>
+    <string name="description">説明</string>
+    <string name="user_name">報告者</string>
+    <string name="date_time">作業日</string>
+
+    <!-- comment card list -->
+    <string name="no_comment">コメントがありません</string>
+
+    <!-- Attachment Dialog -->
+    <string name="attachment_upload_title">写真をアップロード</string>
+    <string name="attachment_camera_message">カメラで撮影</string>
+    <string name="attachment_gallery_message">ギャラリーの選択</string>
+    <string name="attachment_cancel_message">キャンセル</string>
+
+    <!-- Delete Dialog -->
+    <string name="delete_message">この報告書を削除しますか？</string>
+    <string name="comment_delete_message">このコメントを削除しますか？</string>
+    <string name="delete_ok_message">はい</string>
+    <string name="delete_ng_message">いいえ</string>
+
+    <!-- Exception Message Dialog -->
+    <string name="exception_dialog_title">エラー</string>
+</resources>

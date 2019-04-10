@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 枠線 -->
+    <stroke
+        android:width="3px"
+        android:color="#CCCCCC" />
+    <!-- 角を丸める -->
+    <corners android:radius="2px" />
+</shape>

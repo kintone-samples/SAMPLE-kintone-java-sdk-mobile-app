@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cybozu.spacesoldier.activities.EditRecordActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_header_layout_height">
+
+                <ImageButton
+                    android:id="@+id/edit_cancel_button"
+                    style="@style/BaseButtonStyle"
+                    android:background="@null"
+                    android:contentDescription="@string/cancel"
+                    android:onClick="cancel"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/icons8_back_30_2" />
+
+                <ImageButton
+                    android:id="@+id/edit_save_button"
+                    style="@style/BaseButtonStyle"
+                    android:background="@null"
+                    android:contentDescription="@string/save"
+                    android:onClick="save"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/icon_check" />
+
+                <TextView
+                    android:id="@+id/edit_title_label"
+                    style="@style/BaseTitleStyle"
+                    android:text="@string/title_activity_edit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/edit_save_button"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/edit_cancel_button"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/edit_photos_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/add_item_marginLeft"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="7dp"
+                    android:text="@string/photos"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textColor="#8C8C8C"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/add_item_marginLeft"
+                    android:orientation="horizontal">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/add_attach_field"
+                        android:layout_width="110dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="1"
+                        android:visibility="gone">
+
+                        <ImageButton
+                            android:id="@+id/imageButton"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/cropped_style"
+                            android:onClick="attachment"
+                            android:src="@drawable/icon_29"
+                            tools:srcCompat="@drawable/icon_29" />
+
+                        <TextView
+                            android:id="@+id/add_attachment"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="45dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:text="@string/addFile"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/add_attachment_recycler_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:scrollbars="horizontal"
+                        tools:listitem="@layout/activity_attachment" />
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/add_item_space_height" />
+
+                <TextView
+                    android:id="@+id/edit_summary_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/add_item_marginLeft"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="7dp"
+                    android:text="@string/summary"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textColor="#8C8C8C"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/edit_summary_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/add_item_marginLeft"
+                    android:layout_marginLeft="@dimen/add_item_marginLeft"
+                    android:layout_marginEnd="@dimen/add_item_marginRight"
+                    android:layout_marginRight="@dimen/add_item_marginRight"
+                    android:ems="10"
+                    android:hint="@string/summary"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/add_item_space_height" />
+
+                <TextView
+                    android:id="@+id/edit_notes_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/add_item_marginLeft"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="7dp"
+                    android:text="@string/notes"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textColor="#8C8C8C"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/edit_notes_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/add_item_marginLeft"
+                    android:layout_marginLeft="@dimen/add_item_marginLeft"
+                    android:layout_marginEnd="@dimen/add_item_marginRight"
+                    android:layout_marginRight="@dimen/add_item_marginRight"
+                    android:ems="10"
+                    android:gravity="start"
+                    android:hint="@string/notes"
+                    android:inputType="textMultiLine"
+                    android:maxLines="30"
+                    android:minLines="3"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
